@@ -2,27 +2,19 @@
     <div class="start-page">
         <img src="@/../public/img/JavaScript-code_1.png" alt="">
         <div class="block">
-            <span class="block__title">Тест</span>
+            <span class="block__title">Поздравляем!<br>Вы прошли тест</span>
             <br>
-            <span class="block__sub-title">на знание языка</span>
+            <span class="block__sub-title">Вы ответили правильно на {{ this.$store.state.quiz.rightAnswers }} вопросов из {{
+                this.$store.state.quiz.totalAnswers }}</span>
             <br>
-            <span class="block__js">JavaScript</span>
-            <br>
-            <span class="block__questions">15 трудных вопросов</span>
-            <br>
-            <span class="block__answers">по 4 ответа</span>
-            <br>
-            <span class="block__timer">На ответ всего 30 секунд</span>
+            <span class="block__sub-title">Хотите попробовать еще раз?</span>
             <br>
             <router-link class="block__btn" to="question-1">Начать тест</router-link>
         </div>
     </div>
 </template>
 
-<script>
-export default {
-}
-</script>
+<script></script>
 
 <style lang="scss" scoped>
 .start-page {
@@ -34,6 +26,7 @@ export default {
 }
 
 .block {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +39,7 @@ export default {
     z-index: 2;
 
     &__title {
-        font-size: 70px;
+        font-size: 50px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }
@@ -82,6 +75,7 @@ export default {
         margin: auto;
         background-color: blue;
         border-radius: 10px;
+        transition: all 0.4s ease;
     }
 
     &__btn:hover {

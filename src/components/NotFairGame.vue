@@ -2,27 +2,16 @@
     <div class="start-page">
         <img src="@/../public/img/JavaScript-code_1.png" alt="">
         <div class="block">
-            <span class="block__title">Тест</span>
+            <span class="block__title">Упс... Кажется, кто-то жульничал :)</span>
             <br>
-            <span class="block__sub-title">на знание языка</span>
-            <br>
-            <span class="block__js">JavaScript</span>
-            <br>
-            <span class="block__questions">15 трудных вопросов</span>
-            <br>
-            <span class="block__answers">по 4 ответа</span>
-            <br>
-            <span class="block__timer">На ответ всего 30 секунд</span>
-            <br>
+            <span class="block__sub-title">Хотите попробовать еще раз?</span>
+
             <router-link class="block__btn" to="question-1">Начать тест</router-link>
         </div>
     </div>
 </template>
 
-<script>
-export default {
-}
-</script>
+<script></script>
 
 <style lang="scss" scoped>
 .start-page {
@@ -34,10 +23,9 @@ export default {
 }
 
 .block {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
     height: 500px;
     width: 700px;
@@ -46,7 +34,8 @@ export default {
     z-index: 2;
 
     &__title {
-        font-size: 70px;
+        padding-top: 40px;
+        font-size: 50px;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }
@@ -82,12 +71,14 @@ export default {
         margin: auto;
         background-color: blue;
         border-radius: 10px;
+        transition: all 0.4s ease;
     }
 
     &__btn:hover {
         background-color: red;
         transition: all 0.4s ease;
     }
+
 }
 
 img {

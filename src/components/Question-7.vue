@@ -3,34 +3,36 @@
         <div class="block__content">
             <div class="timer">30</div>
             <div class="block__question">
-                <span class="qusteion-title">Вопрос №1</span>
+                <span class="qusteion-title">Вопрос №7</span>
                 <br>
                 <div class="triangle-left"></div>
-                <span class="question">{{ $store.state.quiz.questions[0].question }}</span>
+                <span class="question">{{ $store.state.quiz.questions[6].question }}</span>
                 <div class="triangle-right"></div>
             </div>
-            <img src="@/../public/img/question-1.png" alt="">
+
+            <div class="empty-block"></div>
+
             <div class="answers">
                 <div class="top-answers">
-                    <div @click="checkAnswer" class="answer">
-                        {{ $store.state.quiz.questions[0].firstAnswer }}
+                    <div @click="checkAnswer" class="answer correct-answer">
+                        {{ $store.state.quiz.questions[6].firstAnswer }}
                         <div class="answer-left-triangle"></div>
                         <div class="answer-right-triangle"></div>
                     </div>
                     <div @click="checkAnswer" class="answer">
-                        {{ $store.state.quiz.questions[0].secondAnswer }}
+                        {{ $store.state.quiz.questions[6].secondAnswer }}
                         <div class="answer-left-triangle"></div>
                         <div class="answer-right-triangle"></div>
                     </div>
                 </div>
                 <div class="bottom-answers">
-                    <div @click="checkAnswer" class="answer correct-answer">
-                        {{ $store.state.quiz.questions[0].thirdAnswer }}
+                    <div @click="checkAnswer" class="answer">
+                        {{ $store.state.quiz.questions[6].thirdAnswer }}
                         <div class="answer-left-triangle"></div>
                         <div class="answer-right-triangle"></div>
                     </div>
                     <div @click="checkAnswer" class="answer">
-                        {{ $store.state.quiz.questions[0].fourthAnswer }}
+                        {{ $store.state.quiz.questions[6].fourthAnswer }}
                         <div class="answer-left-triangle"></div>
                         <div class="answer-right-triangle"></div>
                     </div>
@@ -41,18 +43,7 @@
 </template>
   
 <script>
-
-// import QuestionMixin from '@/mixins/QuestionMixin.js';
-
 export default {
-    /** Если был выбран ответ - удаляем интервал;
-     * Если пользователь переходит на другой вопрос - удаляем интервал;
-     * Если пользователь пытается жульничать (переключать страницы, меняя свой вариант ответа ==> интервалы попадают в стек),
-     * ничего тут не меняем, в конце делаем проверку на количество ответов
-     * делаем проверку на количество ответов 
-     * Если время закончилось - удаляем интервал;
-     */
-    // mixins: [QuestionMixin],
     methods: {
         checkTimer() {
             const interval = setInterval(() => {
@@ -79,7 +70,6 @@ export default {
             }, 1000);
         },
         checkAnswer(elem) {
-            console.log(elem);
             const answers = document.querySelectorAll('.answer');
 
             for (let answer of answers) {
@@ -116,17 +106,19 @@ export default {
             };
             setTimeout(() => {
                 this.$store.state.quiz.totalAnswers += 1;
-                this.$router.push('/question-2');
+                this.$router.push('/question-8');
             }, 4000);
         },
     },
-    mounted() {
-        this.$store.state.quiz.rightAnswers = 0;
-        this.$store.state.quiz.totalAnswers = 0;
-        this.checkTimer();
-    }
-};
 
+    mounted() {
+        this.checkTimer();
+    },
+}
 </script>
   
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.answer {
+    font-size: 16px;
+}
+</style>
