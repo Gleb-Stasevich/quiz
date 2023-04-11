@@ -121,4 +121,20 @@ export default {
 }
 </script>
   
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@media (max-width: 715px) {
+    .question {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 570px) {
+    .question {
+        font-size: 18px;
+    }
+
+    .qusteion-title {
+        font-size: 16px;
+    }
+}
+</style>

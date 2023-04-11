@@ -118,7 +118,29 @@ export default {
 </script>
   
 <style lang="scss" scoped>
+.question {
+    font-size: 23px;
+}
+
 .answer {
     font-size: 16px;
+}
+
+@media (max-width: 715px) {
+    .question {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 570px) {
+    .question {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:400px) {
+    .answer {
+        font-size: 13px;
+    }
 }
 </style>

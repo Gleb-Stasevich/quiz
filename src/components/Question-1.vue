@@ -79,7 +79,6 @@ export default {
             }, 1000);
         },
         checkAnswer(elem) {
-            console.log(elem);
             const answers = document.querySelectorAll('.answer');
 
             for (let answer of answers) {

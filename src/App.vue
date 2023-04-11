@@ -25,7 +25,7 @@ export default {
 /** 
 * Стили обнуления
 * Стили анимированного фона
-* Стили для всех компонентов (классы везде повторно используются)
+* Стили для всех компонентов (здесь, т.к. классы везде повторно используются)
 */
 
 * {
@@ -49,7 +49,6 @@ body {
 
 li,
 a {
-  text-decoration: none;
   list-style: none;
 }
 
@@ -167,7 +166,6 @@ nav ul li a {
 nav ul li:hover a {
   text-decoration: none;
   color: #591BC5;
-  ;
 }
 
 nav ul li:hover {
@@ -258,6 +256,83 @@ nav ul li:hover {
   to {
     transform: scale(20) rotate(960deg) translate(-50%, -50%);
     opacity: 0;
+  }
+}
+
+.start-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    position: absolute;
+    top: auto;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+  }
+}
+
+.start {
+
+  &__block {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 500px;
+    width: 700px;
+    background-color: yellow;
+    border-radius: 20px;
+    z-index: 2;
+  }
+
+  &__block-title {
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  &__block-sub-title {
+    font-size: 50px;
+  }
+
+  &__block-js {
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  &__block-questions,
+  &__block-answers,
+  &__block-timer {
+    font-size: 25px;
+  }
+
+  &__block-btn {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 320px;
+    height: 50px;
+    margin: auto;
+    background-color: blue;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+  }
+
+  &__block-btn:hover {
+    background-color: red;
+    transition: all 0.4s ease;
   }
 }
 
@@ -433,5 +508,65 @@ nav ul li:hover {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: white;
+}
+
+@media(max-width: 819px) {
+
+  .top-answers,
+  .bottom-answers {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .answer {
+    margin: auto;
+    margin-top: 15px;
+  }
+}
+
+@media(max-width: 715px) {
+  .block__question {
+    width: 450px;
+  }
+}
+
+@media(max-width: 570px) {
+  .block__question {
+    width: 220px;
+  }
+
+  .question {
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 431px) {
+  .block__sub-title {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .block__js,
+  .block__title {
+    font-size: 50px;
+  }
+
+  .block__questions,
+  .block__answers,
+  .block__timer {
+    font-size: 24px;
+  }
+}
+
+@media(max-width: 400px) {
+
+  .answer {
+    width: 220px !important;
+  }
+
+  img {
+    width: 320px;
+  }
+
 }
 </style>

@@ -119,4 +119,10 @@ export default {
 .question {
     font-size: 20px;
 }
+
+@media (max-width: 570px) {
+    .question {
+        font-size: 13px;
+    }
+}
 </style>

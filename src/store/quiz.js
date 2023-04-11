@@ -70,10 +70,10 @@ export const quiz = {
             },
             {
                 question: 'Что нужно написать в переменную regexp чтобы получить содержимое str?',
-                firstAnswer: '/w+\w+\w+\w+\w+/gim',
-                secondAnswer: '/w+{5}/gi',
-                thirdAnswer: '/\w+/g',
-                fourthAnswer: '/\w+{all}/g',
+                firstAnswer: '/w+\\w+\\w+\\w+\\w+/g',
+                secondAnswer: '/\w+{5}/g',
+                thirdAnswer: '/\\w+/g',
+                fourthAnswer: '/\\w+{all}/g',
                 id: 9,
             },
             {

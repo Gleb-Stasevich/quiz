@@ -121,4 +121,22 @@ export default {
     padding: 1px;
     font-size: 15px;
 }
+
+@media (max-width: 715px) {
+    .question {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 570px) {
+    .question {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:400px) {
+    .answer {
+        font-size: 12px;
+    }
+}
 </style>
