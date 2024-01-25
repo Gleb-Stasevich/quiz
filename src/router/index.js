@@ -102,7 +102,7 @@ const routes = [
 
 const router = createRouter({
     routes,
-    history: createWebHistory(),
+    history: createWebHistory('/quiz/'),
 });
 
 export default router;
