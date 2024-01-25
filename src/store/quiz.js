@@ -1,46 +1,64 @@
+import q1 from '../../public/img/question-1.png';
+import q2 from '../../public/img/question-2.png';
+import q3 from '../../public/img/question-3.png';
+import q4 from '../../public/img/question-4.png';
+import q8 from '../../public/img/question-8.png';
+import q9 from '../../public/img/question-9.png';
+import q13 from '../../public/img/question-13.png';
+
 export const quiz = {
     state: () => ({
+        now: 0,
         rightAnswers: 0,
         totalAnswers: 0,
         questions: [
             {
                 question: 'Что выведет код ниже?',
+                img: q1,
                 firstAnswer: 'NaN',
                 secondAnswer: '100',
                 thirdAnswer: '-100',
                 fourthAnswer: '10',
+                correctAnswer: '-100',
                 id: 1,
             },
             {
                 question: 'Что выведет код ниже?',
+                img: q2,
                 firstAnswer: 'NaN',
                 secondAnswer: '3',
                 thirdAnswer: '4',
                 fourthAnswer: 'В коде ошибка',
+                correctAnswer: '4',
                 id: 2,
             },
             {
                 question: 'Что выведет код ниже?',
+                img: q3,
                 firstAnswer: 'lice',
                 secondAnswer: 'ice',
                 thirdAnswer: 'ice me',
                 fourthAnswer: ':)',
+                correctAnswer: 'ice',
                 id: 3,
             },
             {
-                question: 'Что из приведенного ниже не равно indefined?',
-                firstAnswer: '1 и 2',
-                secondAnswer: 'только 1',
-                thirdAnswer: 'только 2',
-                fourthAnswer: 'оба выведут true',
+                question: 'Какой результат вызова ниже != undefined?',
+                img: q4,
+                firstAnswer: 'Вызов alert',
+                secondAnswer: 'Вызов console.log',
+                thirdAnswer: 'Оба вызова == undefined',
+                fourthAnswer: 'Оба вызовы != undefined',
+                correctAnswer: 'Вызов alert',
                 id: 4,
             },
             {
                 question: 'В чем отличие func.call от func.apply?',
-                firstAnswer: 'func.call ожидает список аргументов, в то время как func.apply принимает псевдомассив',
-                secondAnswer: 'func.apply ожидает список аргументов, в то время как func.call принимает псевдомассив',
+                firstAnswer: 'func.call ожидает список аргументов, а func.apply принимает псевдомассив',
+                secondAnswer: 'func.apply ожидает список аргументов, а func.call принимает псевдомассив',
                 thirdAnswer: 'func.call можно использовать только внутри функции',
                 fourthAnswer: 'func.apply можно использовать только внутри функции',
+                correctAnswer: 'func.call ожидает список аргументов, а func.apply принимает псевдомассив',
                 id: 5,
             },
             {
@@ -49,31 +67,37 @@ export const quiz = {
                 secondAnswer: 'Проверяет есть ли заданное свойство в классе',
                 thirdAnswer: 'Проверяет есть ли заданное свойство в функции',
                 fourthAnswer: 'Используются для наследования классов',
+                correctAnswer: 'Используются для наследования классов',
                 id: 6,
             },
             {
-                question: 'В чем отличие Promise.all от Promise.allSettled?',
+                question: 'Отличие Promise.all от Promise.allSettled?',
                 firstAnswer: 'Promise.all возвращает новый промис, а Promise.allSettled - массив обьектов',
                 secondAnswer: 'Promise.all синтаксический сахар для Promise.allSettled',
                 thirdAnswer: 'Promise.all принимает только массивы, а Promise.allSettled - только обьекты',
                 fourthAnswer: 'Promise.allSettled принимает только массивы, а Promise.all - только обьекты',
+                correctAnswer: 'Promise.all возвращает новый промис, а Promise.allSettled - массив обьектов',
                 id: 7,
             },
 
             {
                 question: 'На какой строчке кода появится ошибка?',
+                img: q8,
                 firstAnswer: 'Здесь нет ошибки',
                 secondAnswer: 'На 1',
                 thirdAnswer: 'На 2',
                 fourthAnswer: 'На 3',
+                correctAnswer: 'Здесь нет ошибки',
                 id: 8,
             },
             {
-                question: 'Что нужно написать в переменную regexp чтобы получить содержимое str?',
+                question: 'Как получить содержимое str?',
+                img: q9,
                 firstAnswer: '/w+\\w+\\w+\\w+\\w+/g',
                 secondAnswer: '/\w+{5}/g',
                 thirdAnswer: '/\\w+/g',
                 fourthAnswer: '/\\w+{all}/g',
+                correctAnswer: '/\\w+/g',
                 id: 9,
             },
             {
@@ -82,6 +106,7 @@ export const quiz = {
                 secondAnswer: 'Статически нетипизированный язык',
                 thirdAnswer: 'Динамически типизированный язык',
                 fourthAnswer: 'Динамически нетипизированный язык',
+                correctAnswer: 'Динамически типизированный язык',
                 id: 10,
             },
             {
@@ -90,6 +115,7 @@ export const quiz = {
                 secondAnswer: 'блочной области видимости',
                 thirdAnswer: 'внутренней области видимости',
                 fourthAnswer: 'внешней области видимости',
+                correctAnswer: 'блочной области видимости',
                 id: 11,
             },
             {
@@ -98,14 +124,17 @@ export const quiz = {
                 secondAnswer: 'который применяется к бинарному типу данных',
                 thirdAnswer: 'который применяется к двум операндам',
                 fourthAnswer: 'который применяется к методам',
+                correctAnswer: 'который применяется к двум операндам',
                 id: 12,
             },
             {
                 question: 'В какой строке вызов alert покажет true?',
+                img: q13,
                 firstAnswer: 'Только в 1',
                 secondAnswer: 'В 1 и в 3',
                 thirdAnswer: 'ни в какой',
                 fourthAnswer: 'Во всех случаях результат будет true',
+                correctAnswer: 'Во всех случаях результат будет true',
                 id: 13,
             },
             {
@@ -114,6 +143,7 @@ export const quiz = {
                 secondAnswer: 'свойство',
                 thirdAnswer: 'обьект',
                 fourthAnswer: 'класс',
+                correctAnswer: 'свойство',
                 id: 14,
             },
             {
@@ -122,6 +152,7 @@ export const quiz = {
                 secondAnswer: 'после события DOMContentLoaded',
                 thirdAnswer: 'во время DOMContentLoaded',
                 fourthAnswer: 'во всех случаях',
+                correctAnswer: 'до события DOMContentLoaded',
                 id: 15,
             },
 
